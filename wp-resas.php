@@ -13,3 +13,6 @@
  */
 
 require dirname( __FILE__ ) . '/vendor/autoload.php';
+
+$wp_resas_admin = new WP_RESAS\Admin();
+$wp_resas_admin->register();
