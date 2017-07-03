@@ -53,13 +53,10 @@ class Admin
 			'api_key',
 			__( 'API Key', 'wp-resas' ),
 			function() {
-				$options = get_option( 'wp_resas_settings' );
-				if ( empty( $options['api_key'] ) ) {
-					$options['api_key'] = '';
-				}
+				$api_key = Util::get_api_key();
 				?>
 				<input type='text' name='wp_resas_settings[api_key]'
-						value='<?php echo esc_attr( $options['api_key'] ); ?>'>
+						value='<?php echo esc_attr( $api_key ); ?>'>
 				<?php
 			},
 			'wp-resas',
